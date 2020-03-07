@@ -22,12 +22,13 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "O2O\\Integration\\": "src/Integration/src",
+            "O2O\\": ["src"]
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": "tests/"
+            "O2O\\Tests\\": "tests/src"
         }
     },
     "replace": {

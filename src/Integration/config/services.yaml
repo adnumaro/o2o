@@ -1,0 +1,16 @@
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    O2O\Integration\PunkApi\:
+        resource: '../src/PunkApi/*'
+        exclude: '../src/PunkApi/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
+
+    O2O\Integration\PunkApi\Infrastructure\Controller\:
+        resource: '../src/PunkApi/Infrastructure/Controller'
+        tags: ['controller.service_arguments']

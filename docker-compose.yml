@@ -1,0 +1,27 @@
+version: '3'
+services:
+
+  nginx:
+    container_name: o2o-nginx
+    image: nginx:1.15-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - .:/o2o
+      - ./etc/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - php
+
+  php:
+    container_name: o2o-php
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "9090:9001"
+    volumes:
+      - .:/o2o
+    env_file:
+      - .env

@@ -3,6 +3,6 @@
 #    controller: App\Controller\DefaultController::index
 
 health-check:
-  path: /health-check
+  path: /integration/health-check
   controller: O2O\Integration\PunkApi\Infrastructure\Controller\HealthCheckController
   methods:  [GET]

@@ -21,7 +21,7 @@ final class SearchBeerByFoodController
         );
 
         $response = $searchBeerByFood->search(
-            new QueryCriteria($request->query->get('criteria'))
+            new QueryCriteria($request->query->get('criteria') ?? '')
         );
 
         return new JsonResponse(

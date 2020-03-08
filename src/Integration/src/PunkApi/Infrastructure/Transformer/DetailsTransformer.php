@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace O2O\Integration\PunkApi\Infrastructure;
+namespace O2O\Integration\PunkApi\Infrastructure\Transformer;
 
-final class FoundTransformer
+final class DetailsTransformer
 {
     public static function transform(array $data): array
     {
@@ -14,7 +14,10 @@ final class FoundTransformer
             array_push($dataTransformer, [
                 'id' => $element['id'],
                 'name' => $element['name'],
-                'description' => $element['description']
+                'description' => $element['description'],
+                'image' => '',
+                'slogan' => $element['tagline'],
+                'created_at' => $element['first_brewed']
             ]);
         }
 

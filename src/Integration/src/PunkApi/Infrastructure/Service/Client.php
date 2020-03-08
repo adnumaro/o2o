@@ -10,8 +10,13 @@ final class Client extends ApiClient
 {
     const BASE_URI = 'https://api.punkapi.com/v2/beers';
 
-    public function search(string $queries)
+    public function searchByFood(string $queries)
     {
         return $this->request('GET', self::BASE_URI . '?food=' . $queries);
+    }
+
+    public function searchById(string $id)
+    {
+        return $this->request('GET', self::BASE_URI . '/' . $id);
     }
 }

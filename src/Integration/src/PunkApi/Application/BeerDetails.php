@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace O2O\Integration\PunkApi\Application;
 
 use O2O\Integration\PunkApi\Domain\IRepository;
-use O2O\Integration\PunkApi\Domain\ValueObject\QueryCriteria;
+use O2O\Integration\PunkApi\Domain\ValueObject\Id;
 
-final class SearchBeerByFood
+final class BeerDetails
 {
     private IRepository $repository;
 
@@ -16,8 +16,8 @@ final class SearchBeerByFood
         $this->repository = $repository;
     }
 
-    public function search(QueryCriteria $criteria)
+    public function details(Id $id)
     {
-        return $this->repository->searchBeerByFood($criteria);
+        return $this->repository->beerDetails($id);
     }
 }

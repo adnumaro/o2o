@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace O2O\Integration\PunkApi\Application;
 
 use O2O\Integration\PunkApi\Domain\IRepository;
-use O2O\Integration\PunkApi\Domain\QueryCriteria;
+use O2O\Integration\PunkApi\Domain\ValueObject\QueryCriteria;
 
 final class SearchBeerByFood
 {

@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace O2O\Integration\PunkApi\Infrastructure\Controller;
 
 use O2O\Integration\PunkApi\Application\SearchBeerByFood;
-use O2O\Integration\PunkApi\Domain\QueryCriteria;
-use O2O\Integration\PunkApi\Infrastructure\FoundTransformer;
+use O2O\Integration\PunkApi\Domain\ValueObject\QueryCriteria;
 use O2O\Integration\PunkApi\Infrastructure\Repository;
 use O2O\Integration\PunkApi\Infrastructure\Service\Client;
+use O2O\Integration\PunkApi\Infrastructure\Transformer\FoundTransformer;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 

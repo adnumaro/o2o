@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace O2O\Integration\PunkApi\Infrastructure;
+namespace O2O\Integration\PunkApi\Infrastructure\Transformer;
 
 final class FoundTransformer
 {

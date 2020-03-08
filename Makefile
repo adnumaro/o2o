@@ -28,6 +28,12 @@ destroy: CMD=down
 start stop destroy:
 	@docker-compose $(CMD)
 
+# 🐳 Docker Compose sh
+sh_nginx: CMD=nginx
+sh_php: CMD=php
+sh_nginx sh_php:
+	@docker exec -it ${CMD} /bin/sh
+
 rebuild:
 	docker-compose build --pull --force-rm --no-cache
 	make deps
@@ -37,7 +43,7 @@ prepare-local:
 	curl -sS https://get.symfony.com/cli/installer | bash
 
 start-local:
-	symfony serve --dir=src/Integration/public --port=80 -d --no-tls --force-php-discovery
+	symfony serve --dir=src/Integration/public --port=8030 -d --no-tls --force-php-discovery
 
 stop-local:
 	symfony server:stop --dir=src/Integration/public

@@ -9,7 +9,6 @@ services:
 
     O2O\Integration\PunkApi\:
         resource: '../src/PunkApi/*'
-        exclude: '../src/PunkApi/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
 
     O2O\Integration\PunkApi\Infrastructure\Controller\:
         resource: '../src/PunkApi/Infrastructure/Controller'

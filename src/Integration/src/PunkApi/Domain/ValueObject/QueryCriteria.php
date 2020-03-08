@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace O2O\Integration\PunkApi\Domain;
+namespace O2O\Integration\PunkApi\Domain\ValueObject;
 
 use O2O\Integration\Shared\Domain\ValueObject\ArrayValueObject;
 

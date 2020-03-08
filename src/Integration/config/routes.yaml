@@ -1,0 +1,9 @@
+health-check:
+  path: /integration/health-check
+  controller: O2O\Integration\PunkApi\Infrastructure\Controller\HealthCheckController
+  methods:  [GET]
+
+search-beer-by-food:
+  path: /integration/search-beer-by-food
+  controller: O2O\Integration\PunkApi\Infrastructure\Controller\SearchBeerByFoodController
+  methods:  [GET]

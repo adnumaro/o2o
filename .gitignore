@@ -3,6 +3,7 @@
 /.env.local
 /.env.local.php
 /.env.*.local
+/.env
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
 /var/
@@ -10,4 +11,7 @@
 ###< symfony/framework-bundle ###
 
 .idea
+/src/**/var
 /.env
+
+.php_cs.cache
